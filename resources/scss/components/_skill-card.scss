@@ -1,0 +1,31 @@
+.skill-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__icon{
+
+  }
+  &__title{
+    margin-top: 48px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 500;
+    line-height: 26px;
+    font-size: 20px;
+    color: $dark;
+  }
+
+  &__text{
+    margin-top: 32px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $dark;
+  }
+
+  &:not(:last-of-type){
+    margin-bottom: 80px;
+  }
+}

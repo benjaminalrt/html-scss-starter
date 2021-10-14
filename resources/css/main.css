@@ -1,1 +1,219 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: Jost, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 39px 20px;
+}
+.header__title {
+  display: flex;
+  align-items: center;
+}
+.header__text {
+  letter-spacing: 8px;
+  font-size: 24px;
+  line-height: 14px;
+}
+.header__icon {
+  margin-right: 16px;
+}
+
+.intro {
+  background-color: #E7816B;
+  padding: 80px 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro__title {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
+}
+.intro__text {
+  margin-top: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.intro__cta {
+  margin-top: 24px;
+  text-align: center;
+}
+.intro__img {
+  margin-top: 80px;
+  margin-bottom: -200px;
+  filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
+}
+
+.card {
+  background-size: cover;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+.card--webdesign {
+  background-image: url("../../../resources/images/image1.png");
+}
+.card--appdesign {
+  background-image: url("../../../resources/images/image2.png");
+}
+.card--graphicdesign {
+  background-image: url("../../../resources/images/image3.png");
+}
+.card__title {
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 1.4px;
+}
+.card__link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 21.68px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  display: flex;
+}
+.card__chevron {
+  margin-left: 16px;
+}
+.card:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.btn {
+  padding: 18px 24px;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  color: #333136;
+  font-size: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-card__title {
+  margin-top: 48px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 20px;
+  color: #333136;
+}
+.skill-card__text {
+  margin-top: 32px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #333136;
+}
+.skill-card:not(:last-of-type) {
+  margin-bottom: 80px;
+}
+
+.intro-section {
+  overflow-y: hidden;
+}
+
+.cards-section {
+  background-color: #FFFFFF;
+  padding: 120px 24px 0;
+}
+
+.skills-section {
+  padding: 120px 24px 0;
+}

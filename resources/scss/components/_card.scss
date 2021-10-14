@@ -1,0 +1,47 @@
+.card{
+
+  background-size: cover;
+  &--webdesign{
+    background-image: url('../../../resources/images/image1.png');
+  }
+  &--appdesign{
+    background-image: url('../../../resources/images/image2.png');
+  }
+  &--graphicdesign{
+    background-image: url('../../../resources/images/image3.png');
+  }
+
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+
+  &__title{
+    color: $light;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 1.4px;
+  }
+
+  &__link{
+    color: $light;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 21.68px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    display: flex;
+  }
+
+  &__chevron{
+    margin-left: 16px;
+  }
+
+  &:not(:last-of-type){
+    margin-bottom: 24px;
+  }
+}
