@@ -6,4 +6,8 @@
     font-size: 15px;
     border-radius: 8px;
     font-weight: 500;
+    &:hover, &:focus, &:active{
+        background-color: $active;
+        color: $light;
+    }
 }

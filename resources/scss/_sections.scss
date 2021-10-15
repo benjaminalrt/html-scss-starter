@@ -10,3 +10,15 @@
 .skills-section{
   padding: 120px 24px 0;
 }
+
+.contact-section{
+  height: 310px;
+  position: relative;
+  .contact{
+    position: absolute;
+    top:120px;
+    width: 327px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
