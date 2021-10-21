@@ -5,13 +5,13 @@
   }
 
   &--webdesign{
-    background-image: url('../../../resources/images/image1.png');
+    background-image: url('../../resources/images/image1.png');
   }
   &--appdesign{
-    background-image: url('../../../resources/images/image2.png');
+    background-image: url('../../resources/images/image2.png');
   }
   &--graphicdesign{
-    background-image: url('../../../resources/images/image3.png');
+    background-image: url('../../resources/images/image3.png');
   }
 
   &--primary{
@@ -71,4 +71,5 @@
   &:not(:last-of-type){
     margin-bottom: 24px;
   }
+
 }

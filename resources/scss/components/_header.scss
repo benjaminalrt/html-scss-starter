@@ -2,18 +2,46 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 39px 20px;
+  padding: rem(39) rem(20);
+  @include lg-breakpoint(){
+    padding: rem(64) 0;
+  }
 
   &__title{
     display: flex;
     align-items: center;
   }
   &__text{
-    letter-spacing: 8px;
-    font-size: 24px;
-    line-height: 14px;
+    @include font(24,14,$black,700,8);
   }
   &__icon{
-    margin-right: 16px;
+    margin-right: rem(16);
+  }
+  &__nav{
+    display: none;
+  }
+  @include lg-breakpoint(){
+    &__burger{
+      display: none;
+    }
+    &__nav{
+      display: block;
+      ul{
+        display: flex;
+        list-style: none;
+        li{
+          &:not(:first-child){
+            margin-left: rem(42);
+          }
+          a{
+            @include font(14,14,$dark,400,2);
+            text-decoration: none;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
   }
 }

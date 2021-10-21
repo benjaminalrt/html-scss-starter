@@ -12,24 +12,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header">
+<header class="container header">
     <div class="header__title">
         <img src="resources/images/logo.png" alt="" width="24" height="24" class="header__icon">
         <h1 class="header__text">DEGLINGO</h1>
     </div>
     <img class="header__burger" src="resources/images/burger.svg" width="24" height="24" alt="Menu">
+    <nav class="header__nav">
+        <ul>
+            <li><a href="#">OUR COMPANY</a></li>
+            <li><a href="#">LOCATIONS</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
-    <section class="intro-section">
+    <section class="intro-section container">
         <article class="intro">
-            <h1 class="intro__title">Award-winning custom designs and digital branding solutions</h1>
-            <p class="intro__text">With over 10 years in the industry, we are experienced in creating fully responsive
-                websites, app design, and engaging brand experiences. Find out more about our services.</p>
-            <a href="#" class="btn intro__cta">LEARN MORE</a>
+            <div class="intro__block">
+                <h1 class="intro__title">Award-winning custom designs and digital branding solutions</h1>
+                <p class="intro__text">With over 10 years in the industry, we are experienced in creating fully responsive
+                    websites, app design, and engaging brand experiences. Find out more about our services.</p>
+                <a href="#" class="btn intro__cta">LEARN MORE</a>
+            </div>
             <img class="intro__img" src="resources/images/phone.png" alt="">
         </article>
     </section>
-    <section class="cards-section">
+    <section class="cards-section container">
         <article class="card card--250 card--webdesign">
             <h1 class="card__title">WEB DESIGN</h1>
             <a href="#" class="card__link">VIEW PROJECTS <img class="card__chevron"
@@ -46,7 +55,7 @@
                                                               src="resources/images/chevron_right.svg" alt=""></a>
         </article>
     </section>
-    <section class="skills-section">
+    <section class="skills-section container">
         <article class="skill-card">
             <img src="resources/images/picto1.png" alt="" class="skill-card__icon">
             <h1 class="skill-card__title">PASSIONATE</h1>
@@ -68,7 +77,7 @@
                 provide.</p>
         </article>
     </section>
-    <section class="contact-section">
+    <section class="contact-section container">
         <article class="contact card card--primary">
             <h1 class="card__title card__title--big">Let’s talk about your project</h1>
             <p class="card__text">Ready to take it to the next level? Contact us today and find out how our expertise
