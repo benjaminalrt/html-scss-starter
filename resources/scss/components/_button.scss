@@ -1,11 +1,10 @@
 .btn{
-    padding: 18px 24px ;
+    padding: toRem(18) toRem(24) ;
     background-color: $light;
     text-decoration: none;
-    color: $dark;
-    font-size: 15px;
     border-radius: 8px;
-    font-weight: 500;
+    transition: all 200ms;
+    @include font(15,15,500,$dark);
     &:hover, &:focus, &:active{
         background-color: $active;
         color: $light;

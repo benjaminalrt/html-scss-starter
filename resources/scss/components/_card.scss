@@ -1,67 +1,80 @@
 .card{
 
-  &--250{
-    height: 250px;
+
+  &--medium{
+    height: toRem(250);
+    @include md-breakpoint(){
+      height: toRem(308);
+    }
   }
 
-  &--webdesign{
-    background-image: url('../../resources/images/image1.png');
-  }
-  &--appdesign{
-    background-image: url('../../resources/images/image2.png');
-  }
-  &--graphicdesign{
-    background-image: url('../../resources/images/image3.png');
+  &--md-100{
+    @include md-breakpoint(){
+      height: 100%;
+    }
   }
 
-  &--primary{
-    background-color: $primary;
+  background-color: $primary;
+  &--padding{
+    padding: toRem(64) toRem(24);
+    @include md-breakpoint(){
+      padding: toRem(95) toRem(73);
+    }
   }
 
-  background-size: cover;
-  padding: 64px 24px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+
+  &__bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: all 200ms;
+  }
+
+  &:hover, &:focus, &:active{
+    .card__bg{
+      opacity: 0.2;
+    }
+  }
 
   &__title{
-    color: $light;
-    text-align: center;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 36px;
+    @include font(28,36,500);
     letter-spacing: 1.4px;
+    z-index: 2;
 
     &--big{
-      font-size: 32px;
-      line-height: 36px;
+      @include font(32,36,500);
     }
   }
 
   &__link{
-    color: $light;
+    @include font(15,21.68,500);
     text-decoration: none;
-    font-size: 15px;
-    line-height: 21.68px;
-    font-weight: 500;
     letter-spacing: 5px;
     display: flex;
+    z-index: 2;
   }
 
   &__text{
-    color: $light;
+    @include font(15,25);
     margin-top: 6px;
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 400;
-    text-align: center;
 
   }
 
   &__cta{
-    margin-top: 32px;
+    margin-top: toRem(32);
+    @include md-breakpoint(){
+      margin: 0;
+    }
   }
 
   &__chevron{
@@ -70,6 +83,6 @@
 
   &:not(:last-of-type){
     margin-bottom: 24px;
-  }
 
+  }
 }

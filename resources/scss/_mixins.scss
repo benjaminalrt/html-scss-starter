@@ -1,0 +1,46 @@
+@mixin font($fontSize, $lineHeight, $fontWeight : 400, $fontColor : $light, $textAlign : center, $letterSpacing: 1){
+  font-size: toRem($fontSize);
+  line-height: toRem($lineHeight);
+  font-weight: $fontWeight;
+  color: $fontColor;
+  text-align: $textAlign;
+  letter-spacing: toRem($letterSpacing);
+}
+
+@mixin md-breakpoint() {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+@mixin lg-breakpoint() {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin padding-h($left,$right : false){
+  padding-left: toRem($left);
+  @if($right){
+    padding-right:  toRem($right);
+  } @else {
+    padding-right:  toRem($left);
+  }
+}
+
+@mixin padding-v($top,$bot : false){
+  padding-top: toRem($top);
+  @if($bot){
+    padding-bottom:  toRem($bot);
+  } @else {
+    padding-bottom:  toRem($top);
+  }
+}
+
+@mixin margin-h($left,$right : false){
+  margin-left: toRem($left);
+  @if($right){
+    margin-right:  toRem($right);
+  } @else {
+    margin-right:  toRem($left);
+  }
+}

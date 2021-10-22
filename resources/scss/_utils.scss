@@ -1,0 +1,47 @@
+@use "sass:math";
+
+.gap{
+  margin-top: toRem(24);
+
+  &--large{
+    margin-top: toRem(120);
+    @include md-breakpoint(){
+      margin-top: toRem(160);
+    }
+  }
+}
+
+.container{
+  &--primary{
+    background-color: $primary;
+  }
+  @include padding-h(20);
+  @include md-breakpoint(){
+    @include padding-h(165);
+  }
+  &--md{
+    @include md-breakpoint(){
+      &-default{
+        background-color: $light;
+      }
+    }
+  }
+}
+
+.text--md{
+  @include md-breakpoint(){
+    &-left{
+      text-align: left !important;
+    }
+  }
+}
+
+.flex--md{
+  @include md-breakpoint(){
+    &-right{
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+  }
+}

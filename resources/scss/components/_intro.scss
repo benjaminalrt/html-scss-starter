@@ -1,63 +1,47 @@
 .intro{
-  background-color: $primary;
-  padding: 80px 24px 0;
+  padding: toRem(80) toRem(24) 0;
+
+
   @include lg-breakpoint(){
-    overflow: hidden;
-    border-radius: 15px;
-    padding: rem(145) rem(95);
-  }
+    &.card{
+      padding: toRem(145) toRem(95);
+      padding-right: 40%;
+    }
 
-  &__block{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  }
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include lg-breakpoint(){
-    flex-direction: row;
   }
 
   &__title{
-    @include font(32,36,$light,500);
-    text-align: center;
+    @include font(32,36,500);
     @include lg-breakpoint(){
-      @include font(48,48,$light,500);
-      text-align: left;
+      @include font(48,48,500,unchanged,left);
     }
   }
 
   &__text {
-    @include font(15,25,$light,400);
-    margin-top: rem(14);
-    text-align: center;
+    margin-top: toRem(14);
+    @include font(15,25,400);
     @include lg-breakpoint(){
-      @include font(16,26,$light,400);
-      margin-top: rem(30);
-      text-align: left;
+      margin-top: toRem(30);
+      @include font(16,26,400,unchanged,left);
     }
   }
 
   &__cta {
-    margin-top: rem(24);
-    text-align: center;
+    margin-top: toRem(24);
     @include lg-breakpoint(){
-      margin-top: rem(40);
-      margin-right: auto;
+      margin-top: toRem(40);
+      align-self: flex-start;
     }
   }
 
   &__img{
-    margin-bottom: -200px;
-    margin-top: 80px;
-    filter: drop-shadow(20px -40px 80px rgba(93, 2, 2, 0.497569));
+    margin-top: toRem(80);
+    margin-bottom: toRem(-200);
+    filter: drop-shadow(toRem(20) toRem(-40) toRem(80) rgba(93, 2, 2, 0.497569));
     @include lg-breakpoint(){
-      margin-top: 0;
-      margin-left: rem(100);
-      margin-bottom: -240px;
+      position: absolute;
+      right: toRem(95);
+      margin-bottom: toRem(-150);
     }
   }
 }

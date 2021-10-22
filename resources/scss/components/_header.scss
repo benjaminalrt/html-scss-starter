@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(39) rem(20);
-  @include lg-breakpoint(){
-    padding: rem(64) 0;
+  @include padding-v(36);
+  @include md-breakpoint(){
+    @include padding-v(72);
   }
 
   &__title{
@@ -12,36 +12,36 @@
     align-items: center;
   }
   &__text{
-    @include font(24,14,$black,700,8);
+    @include font(24,16,700,$black, center, 8);
   }
   &__icon{
-    margin-right: rem(16);
+    margin-right: toRem(16);
   }
+
   &__nav{
     display: none;
-  }
-  @include lg-breakpoint(){
-    &__burger{
-      display: none;
-    }
-    &__nav{
+    @include md-breakpoint(){
       display: block;
-      ul{
-        display: flex;
-        list-style: none;
-        li{
-          &:not(:first-child){
-            margin-left: rem(42);
-          }
-          a{
-            @include font(14,14,$dark,400,2);
-            text-decoration: none;
-            &:hover{
-              text-decoration: underline;
-            }
-          }
-        }
+    }
+    &-list{
+      display: flex;
+      list-style: none;
+      gap: toRem(42);
+    }
+    &-item{
+    }
+    &-link{
+      text-decoration: none;
+      @include font(14,14,400,$dark,center,2);
+      &:hover{
+        text-decoration: underline;
       }
+    }
+  }
+
+  &__burger{
+    @include md-breakpoint(){
+      display: none;
     }
   }
 }

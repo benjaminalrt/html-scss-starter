@@ -3,29 +3,27 @@
   flex-direction: column;
   align-items: center;
 
+
+
   &__icon{
 
   }
   &__title{
+    @include font(20,26,500,$dark);
     margin-top: 48px;
-    text-align: center;
     letter-spacing: 5px;
-    font-weight: 500;
-    line-height: 26px;
-    font-size: 20px;
-    color: $dark;
   }
 
   &__text{
+    @include font(16,26,400,$dark);
     margin-top: 32px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: $dark;
   }
 
   &:not(:last-of-type){
-    margin-bottom: 80px;
+    margin-bottom: toRem(80);
+    @include md-breakpoint(){
+      margin-right: toRem(20);
+      margin-bottom: 0;
+    }
   }
 }

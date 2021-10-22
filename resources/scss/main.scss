@@ -1,8 +1,11 @@
 @import "reset";
 @import "mixin_functions";
 
-@import "typo";
 @import "variables";
-@import "components";
+@import "mixins";
+@import "functions";
 
+@import "typo";
+@import "utils";
+@import "components";
 @import "sections";

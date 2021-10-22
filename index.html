@@ -12,50 +12,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="container header">
+<header class="header container">
     <div class="header__title">
         <img src="resources/images/logo.png" alt="" width="24" height="24" class="header__icon">
         <h1 class="header__text">DEGLINGO</h1>
     </div>
     <img class="header__burger" src="resources/images/burger.svg" width="24" height="24" alt="Menu">
     <nav class="header__nav">
-        <ul>
-            <li><a href="#">OUR COMPANY</a></li>
-            <li><a href="#">LOCATIONS</a></li>
-            <li><a href="#">CONTACT</a></li>
+        <ul class="header__nav-list">
+            <li class="header__nav-item"><a class="header__nav-link" href="#">OUR COMPANY</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#">LOCATIONS</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#">CONTACT</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <section class="intro-section container">
-        <article class="intro">
-            <div class="intro__block">
-                <h1 class="intro__title">Award-winning custom designs and digital branding solutions</h1>
-                <p class="intro__text">With over 10 years in the industry, we are experienced in creating fully responsive
-                    websites, app design, and engaging brand experiences. Find out more about our services.</p>
-                <a href="#" class="btn intro__cta">LEARN MORE</a>
-            </div>
+    <section class="intro-section container container--primary container--md-default ">
+        <article class="intro card bg--primary">
+            <h1 class="intro__title">Award-winning custom designs and digital branding solutions</h1>
+            <p class="intro__text">With over 10 years in the industry, we are experienced in creating fully responsive
+                websites, app design, and engaging brand experiences. Find out more about our services.</p>
+            <div  class="intro__cta "><a href="#" class="btn">LEARN MORE</a></div>
             <img class="intro__img" src="resources/images/phone.png" alt="">
         </article>
     </section>
-    <section class="cards-section container">
-        <article class="card card--250 card--webdesign">
-            <h1 class="card__title">WEB DESIGN</h1>
-            <a href="#" class="card__link">VIEW PROJECTS <img class="card__chevron"
-                                                              src="resources/images/chevron_right.svg" alt=""></a>
+    <section class="cards-section container gap--large">
+        <article >
+            <a class="card card--medium card--md-100" href="#">
+                <img class="card__bg" src="./resources/images/image1.png" alt="">
+                <h1 class="card__title">WEB DESIGN</h1>
+                <p class="card__link">VIEW PROJECTS <img class="card__chevron"
+                                                                  src="resources/images/chevron_right.svg" alt=""></p>
+            </a>
         </article>
-        <article class="card card--250 card--appdesign">
-            <h1 class="card__title">APP DESIGN</h1>
-            <a href="#" class="card__link">VIEW PROJECTS <img class="card__chevron"
-                                                              src="resources/images/chevron_right.svg" alt=""></a>
+        <article class="gap">
+            <a class="card card--medium" href="#">
+                <img class="card__bg" src="./resources/images/image2.png" alt="">
+                <h1 class="card__title">APP DESIGN</h1>
+                <p class="card__link">VIEW PROJECTS <img class="card__chevron"
+                                                                  src="resources/images/chevron_right.svg" alt=""></p>
+            </a>
         </article>
-        <article class="card card--250 card--graphicdesign">
-            <h1 class="card__title">GRAPHIC DESIGN</h1>
-            <a href="#" class="card__link">VIEW PROJECTS <img class="card__chevron"
-                                                              src="resources/images/chevron_right.svg" alt=""></a>
+        <article class="gap">
+            <a href="#" class="card card--medium">
+                <img class="card__bg" src="./resources/images/image3.png" alt="">
+                <h1 class="card__title">GRAPHIC DESIGN</h1>
+                <p class="card__link">VIEW PROJECTS <img class="card__chevron"
+                                                                  src="resources/images/chevron_right.svg" alt=""></p>
+            </a>
         </article>
     </section>
-    <section class="skills-section container">
+    <section class="skills-section container gap--large">
         <article class="skill-card">
             <img src="resources/images/picto1.png" alt="" class="skill-card__icon">
             <h1 class="skill-card__title">PASSIONATE</h1>
@@ -77,16 +84,18 @@
                 provide.</p>
         </article>
     </section>
-    <section class="contact-section container">
-        <article class="contact card card--primary">
-            <h1 class="card__title card__title--big">Let’s talk about your project</h1>
-            <p class="card__text">Ready to take it to the next level? Contact us today and find out how our expertise
+    <section class="contact-section container gap--large">
+        <article class="contact card card--padding card--primary">
+            <h1 class="card__title card__title--big text--md-left">Let’s talk about your project</h1>
+            <p class="card__text text--md-left">Ready to take it to the next level? Contact us today and find out how our expertise
                 can help your business grow.</p>
-            <a href="#" class="btn card__cta">GET IN TOUCH</a>
+            <div class="card__cta flex--md-right">
+                <a href="#" class="btn">GET IN TOUCH</a>
+            </div>
         </article>
     </section>
 </main>
-<footer class="footer">
+<footer class="footer container">
     <header class="footer-header">
         <div class="footer-header__title">
             <img src="resources/images/logo.png" alt="" width="24" height="24" class="footer-header__icon">
